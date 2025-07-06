@@ -10,4 +10,4 @@ jobs:
               run: |
                 docker login --username mohsin6837 --password ${{ secrets.GH_PAT}} ghcr.io
                 docker build -t ghcr.io/mohsin6837/hello-world .
-                docker push ghcr.io/mohson6837/hello-world
+                docker push ghcr.io/mohsin6837/hello-world
