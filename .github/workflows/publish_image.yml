@@ -1,0 +1,13 @@
+name: Build and Publish Docker Image
+on:
+    push
+jobs:
+    build_and_publish:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Build and Publish the Image
+              run: |
+                docker login --username mohsin6837 --password ${{ secrets.GH_PAT}} ghcr.io
+                docker build -t ghcr.io/mohsin6837/hello-world .
+                docker push ghcr.io/mohson6837/hello-world
